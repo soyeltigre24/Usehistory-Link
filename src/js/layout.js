@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
+import Page2 from "./views/page2";
+import Page3 from "./views/page3";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
@@ -23,6 +25,14 @@ const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/">
+							<Home />
+						</Route>
+						<Route exact path="/page2">
+							<Page2 />
+							<Home />
+						</Route>
+						<Route exact path="/page3">
+							<Page3 />
 							<Home />
 						</Route>
 						<Route exact path="/demo">
