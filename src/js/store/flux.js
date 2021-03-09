@@ -43,9 +43,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://assets.breatheco.de/apis/fake/todos/user/JairoAriza")
 					.then(res => res.json())
 					.then(response => {
+						console.log(response);
 						setStore({ todos: response });
 					});
-			}
+			},
+			addtodo: todo => setStore({ todos: [{ label: todos }] })
 		}
 	};
 };
